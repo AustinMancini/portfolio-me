@@ -1,3 +1,5 @@
+
+
 from logging.config import fileConfig
 
 from app.core.config import DATABASE_URL, Base
