@@ -1,7 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
+from pydantic import BaseModel
 
-# Initialize FastAPI
+
 app = FastAPI()
+
 
 @app.get("/")
 def home():
