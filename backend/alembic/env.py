@@ -4,7 +4,7 @@ from logging.config import fileConfig
 
 from app.core.config import DATABASE_URL, Base
 from app.models.profile import Profile
-from app.models.post import Post
+from app.models.posts import Post
 
 from sqlalchemy import engine_from_config, pool
 

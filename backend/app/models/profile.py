@@ -20,6 +20,5 @@ class Profile(Base):
         ForeignKey("auth.users.id", ondelete="CASCADE"),
         primary_key=True
     )
-    full_name = Column(String, nullable=True, index=True)
-    is_subscribed = Column(Boolean, default=False)
-    role = Column(String, default='subscribers')
+    is_subscribed = Column(Boolean, default=True)
+    role = Column(String, default='subscriber')
