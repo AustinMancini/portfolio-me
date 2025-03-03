@@ -7,8 +7,9 @@ from typing import Literal
 class ProfileBase(BaseModel):
     model_config = ConfigDict(from_attributes=True)
     
-    is_subscribed: bool | None
-    
+    is_subscribed: bool | None = None
+    # could be is_subscribed: bool | None. I will test and see what happens
+
 # Schema for updating profile information
 class ProfileUpdate(ProfileBase):
     role: Literal["subscriber", "admin"]
@@ -17,4 +18,11 @@ class ProfileUpdate(ProfileBase):
 class ProfileResponse(ProfileBase):
     user_id: UUID
     is_subscribed: bool
+    role: Literal["subscriber", "admin"]
+
+
+class User(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    user_id: UUID
     role: Literal["subscriber", "admin"]

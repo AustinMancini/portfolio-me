@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import Column, String, Boolean, CheckConstraint, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID 
-from app.core.config import Base
+from backend.app.core.config import Base
 
 # Dummy User model for auth.users (Supabase-managed)
 class User(Base):
