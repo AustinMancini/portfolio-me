@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
 from pydantic import BaseModel
-from backend.app.api.profile import router as profile_router
+from backend.app.api.routers.profile import router as profile_router
 
 
 app = FastAPI()
